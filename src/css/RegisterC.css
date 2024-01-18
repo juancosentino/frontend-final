@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.containerRegister{
+    display: flex;
+    justify-content: start;
+    height: 80vh;
+    width: 100%;
+    background-image: url(https://i.pinimg.com/564x/b6/69/09/b66909b7b63193a644012fd6d2044df2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.section-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-content: center;
+}
+
+.section-2{
+    width: 400px;
+    border-radius: 10px;
+    margin: auto 180px;
+    padding: 0px;
+}
+
+.glass{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.imgLogin{
+    width: 40px;
+    margin: 0 0 5px 130px;
+}
+
+.btn-css{
+    background: transparent;
+    color: black;
+    border: solid 1px black;
+}
+
+@media (min-width: 602px) and (max-width: 800px){
+    .section-2{
+        border-radius: 20px;
+        margin: 217px auto;
+        padding: 0px;
+    }
+}
+
+@media (max-width: 601px){
+    
+    .section-2{
+        border-radius: 10px;
+        margin: 217px auto;
+        padding: 0px;
+    }
+}
