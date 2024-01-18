@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    
+}
+
+.container1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-content: center;
+}
+
+@media (min-width: 600px) {
+    .container1 {
+      grid-template-columns: repeat(2, 1fr);
+      
+    }
+    .box{
+        margin: 10px;
+    }
+}
+
+@media (min-width: 900px) {
+    .box{
+        margin: 40px;
+    }
+    .container1 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.box {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+.box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; 
+    margin-bottom: 8px;
+}
+
+#root { 
+    flex: 1;
+}
+
+.pagina {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.nameWe{
+    font-size: 18px;
+}
+
+.titleWe{
+    margin: 10px 0 ;
+}
+
+.contenedor-externo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */ /* Ajusta la altura según tus necesidades */
+  }
+
+  .div-azul {
+    width: 250px; /* Ajusta el ancho según tus necesidades */
+    height: 300px; /* Ajusta la altura según tus necesidades */
+    margin: 10px 30px; /* Espacio entre los divs */
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+@media (max-width: 600px) {
+    body{
+        background: gold;
+    }
+
+    .contenedor-externo {
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .imgWe{
+        margin-bottom: 10px;
+        width: 200px;
+        height: 250px;
+    }
+
+    .div-azul {
+      margin: 20px 0;
+    }
+}
+
+ .imgWe{
+    margin-bottom: 10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+} 
