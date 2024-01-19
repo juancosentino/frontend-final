@@ -4,30 +4,25 @@ import '../css/WeC.css'
 
 export const WeC = ({ h2, urlImage }) => {
   return (
-    <>
-        {/* <div className='box'>
-            <img src={urlImage} alt="" />
-            <h2 className='nameWe'>{h2}</h2>
-        </div> */}
-        <div class="contenedor-externo">
-          <div class="div-azul">
-            <img src={urlImage} className='imgWe' alt=""/>
-            <h2 className='nameWe'>{h2}</h2>
-          </div>
-          <div class="div-azul">
-            <img src={urlImage} className='imgWe' alt=""/>
-            <h2 className='nameWe'>{h2}</h2>            
-          </div>
-          <div class="div-azul">
-            <img src={urlImage} className='imgWe' alt=""/>
-            <h2 className='nameWe'>{h2}</h2>
-          </div>
-          <div class="div-azul">
-            <img src={urlImage} className='imgWe' alt=""/>
-            <h2 className='nameWe'>{h2}</h2>
-          </div>
-        </div> 
-    </>
+    <body>
+      <h2 className="d-flex justify-content-center titleWe">Frase del equipo</h2>
+      <div class="creadores">
+        <div class="creador">
+          <img src={urlImage} alt="Creador 1"/>
+          <h3>{name}</h3>
+        </div>
+
+        <div class="creador">
+          <img src={urlImage2} alt="Creador 2"/>
+          <h3>{name1}</h3>
+        </div>
+
+        <div class="creador">
+          <img src={urlImage3} alt="Creador 3"/>
+          <h3>{name2}</h3>
+        </div>
+      </div>      
+    </body>
   )
 }
 
