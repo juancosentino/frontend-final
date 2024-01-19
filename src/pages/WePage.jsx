@@ -11,10 +11,11 @@ export const WePage = () => {
   return (
     <div className="pagina" style={contenedorEstilos}>
         <NavbarC/>
-
-        <h1 className="d-flex justify-content-center titleWe">Frase del Equipo</h1>
         
-        <WeC urlImage=' https://i.pinimg.com/474x/f6/43/a1/f643a1437bc4c490837cad9d1a2ec24c.jpg' h2='Juan Cosentino' />
+        <WeC urlImage='https://i.pinimg.com/236x/7c/37/11/7c3711a96dba0f88a6bc01f71863b3fb.jpg' name='Juan Cosentino' 
+        urlImage2='https://i.pinimg.com/236x/7c/37/11/7c3711a96dba0f88a6bc01f71863b3fb.jpg' name1='Ignacio Fernández'
+        urlImage3='https://i.pinimg.com/236x/7c/37/11/7c3711a96dba0f88a6bc01f71863b3fb.jpg' name2='Benjamin Zelaya'
+        />
 
         <FooterC/>
 
