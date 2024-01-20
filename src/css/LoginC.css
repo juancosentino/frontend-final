@@ -6,7 +6,7 @@ body {
 .containerLogin{
     display: flex;
     justify-content: start;
-    height: 70vh;
+    min-height: 77vh;
     width: 100%;
     background-image: url(https://i.pinimg.com/564x/2e/cd/ee/2ecdee7b316365effd25cf58b2b9d91c.jpg);
     background-position: center center;
@@ -40,7 +40,7 @@ body {
 
 .imgLogin{
     width: 40px;
-    margin: auto;
+    margin: 0;
 }
 
 @media (min-width: 602px) and (max-width: 800px){
