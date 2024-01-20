@@ -2,7 +2,7 @@ import React from 'react'
 import { Row, Col } from 'react-bootstrap';
 import '../css/WeC.css'
 
-export const WeC = ({ h2, urlImage }) => {
+export const WeC = ({ name, urlImage, urlImage2, urlImage3, name1, name2}) => {
   return (
     <body>
       <h2 className="d-flex justify-content-center titleWe">Frase del equipo</h2>
