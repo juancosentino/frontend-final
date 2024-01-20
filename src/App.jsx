@@ -6,6 +6,7 @@ import ErrorPage from "./pages/ErrorPage"
 import WePage from "./pages/WePage"
 import LoginPage from "./pages/LoginPage"
 import RegisterPage from './pages/RegisterPage'
+import PlansPage from './pages/PlansPage'
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/We" element={<WePage/>} />
           <Route path="/login" element={<LoginPage/>}></Route>
           <Route path="/Register" element={<RegisterPage/>}></Route>
+          <Route path="/Plans" element={<PlansPage/>}></Route>
           <Route path="*" element={<ErrorPage/>} />
         </Routes>
       </BrowserRouter>
