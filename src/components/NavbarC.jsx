@@ -18,12 +18,10 @@ import '../css/NavbarC.css'
               <Nav className="me-auto">
                 <Nav.Link href="/">Inicio</Nav.Link>
                 <Nav.Link href="/We">Sobre Nosotros</Nav.Link>
-                <Nav.Link href="/contact">Contacto</Nav.Link>
+                <Nav.Link href="/Plans">Planes</Nav.Link>
                 <NavDropdown title="Productos" id="basic-nav-dropdown">
                   <NavDropdown.Item href="#action/3.1">Alimentos</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">
-                    Accesorios
-                  </NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.2">Accesorios</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.3">Juguetes</NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item href="#action/3.4">
