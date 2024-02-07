@@ -1,89 +1,105 @@
-import React from 'react'
 import '../css/LoginC.css'
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
+import {Col, Container} from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
+import { Link } from 'react-router-dom'
 
 function LoginC() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [ formValues, setFormValues ] = useState({
+    email: '',
+    pass: ''
+  })
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Aquí puedes manejar la lógica de envío del formulario
-    console.log('Correo:', email, 'Contraseña:', password);
-  };
+  const handleChange = (ev) =>{
+    setFormValues({...formValues, [ev.target.name]: ev.target.value})
+  }
+
+  const handleClick = async(ev) => {
+    ev.preventDefault()
+    if(!formValues.email || !formValues.pass){
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Algún campo esta vacio!"
+      });
+    }else{
+      const sendFormLogin = await fetch('http://localhost:3001/api/users/login', {
+        method: 'POST', 
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify({
+          emailUsuario: formValues.email,
+          contrasenia: formValues.pass
+        })
+      })
+
+      const data = await sendFormLogin.json()
+      console.log(data)
+      if(data.role === 'admin'){
+        sessionStorage.setItem('token', JSON.stringify(data.token))
+        sessionStorage.setItem('role', JSON.stringify(data.role))
+        sessionStorage.setItem('usuario', JSON.stringify(data.usuario))
+        location.href = '/admin'
+      }else{
+        sessionStorage.setItem('token', JSON.stringify(data.token))
+        sessionStorage.setItem('role', JSON.stringify(data.role))
+        sessionStorage.setItem('usuario', JSON.stringify(data.usuario))
+        location.href = '/user'
+      }
+      
+    }
+  }
 
   return (
     <>
-      <div className='body'>
-      <section className='left-section'>
-        <div className='welcome'>
-          <h2>¡Bienvenido al refugio del bienestar animal!,</h2>
-          <p>Aquí, cada ronroneo 
-          y ladrido es una canción de alegría. Permítenos ser parte del viaje 
-          de cuidado y felicidad de tus queridos amigos peludos.</p>
-          <img  className='imgLogin' src="https://cdn-icons-png.flaticon.com/512/7019/7019169.png" 
-          alt=""/>
-        </div>
-      </section>
-      <section className='right-section'>
-        <Form className='formLogin' onSubmit={handleSubmit}>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Correo Electrónico</Form.Label>
-            <Form.Control
-              type="email"
-              placeholder="Ingresa tu correo"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </Form.Group>
-
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Contraseña</Form.Label>
-            <Form.Control
-              type="password"
-              placeholder="Ingresa tu contraseña"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </Form.Group>
-
-          <Button variant="primary" type="submit">
-            Enviar
-          </Button>
-        </Form>
-      </section>
-    </div>
+      <Container fluid className='container-reg'>
+        <Row className='Row-reg'>
+          <Col className='col-left'>
+            <Link to={'/'} className='btn-login' style={{textDecoration: 'none'}}>
+              <button className='link-home'>
+                Pagina Principal
+              </button>
+            </Link>
+            <Form className='form-reg' >
+              <div className='div-reg'>
+                <img src="https://cdn-icons-png.flaticon.com/512/74/74472.png" 
+                alt="" 
+                width={30}
+                height={30}
+                style={{margin: '2px'}}/>
+                <Form.Group controlId="formNombre">
+                  <Form.Control type="email" name='email' value={formValues.email} onChange={handleChange} placeholder="Mail" />
+                </Form.Group>
+              </div>
+              <div className='div-reg'>
+                <img src="https://cdn-icons-png.flaticon.com/512/63/63541.png" 
+                alt="" 
+                width={25}
+                height={25}
+                style={{margin: '2px'}}/>
+                <Form.Group controlId="formPassword">
+                  <Form.Control type="password" name='pass' value={formValues.pass} onChange={handleChange} placeholder="Contraseña" />
+                </Form.Group>
+              </div>
+              <div className='div-p'>
+                <p>No tienes cuenta? </p>
+                <Link to={'/Register'}>
+                  Registrate
+                </Link>
+              </div>
+              <Button variant="primary" type="submit" onClick={handleClick} className='btn-reg' 
+              style={{fontSize: '18px', width: '140px'}}>
+                Iniciar Sesion
+              </Button>
+            </Form>
+          </Col>
+        </Row>
+      </Container>
     </>
     
   );
 }
-
-/* const LoginC = () => {
-
-
-  return (
-    <div className='body'>
-      <section className='left-section'>
-        <div className='welcome'>
-          <h2>¡Bienvenido al refugio del bienestar animal!,</h2>
-          <p>Aquí, cada ronroneo 
-          y ladrido es una canción de alegría. Permítenos ser parte del viaje 
-          de cuidado y felicidad de tus queridos amigos peludos.</p>
-        </div>
-      </section>
-      <section className='right-section'>
-        
-      </section>
-    </div>
-  );
-};
- */
-
 export default LoginC 
