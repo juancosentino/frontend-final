@@ -7,11 +7,11 @@ import '../css/LoginC.css'
 const LoginPage = () => {
   return (  
     <>
-      <NavbarC/>
+      {/* <NavbarC/> */}
 
       <LoginC/>
 
-      <FooterC/>
+      {/* <FooterC/> */}
     </>
   )
 }
