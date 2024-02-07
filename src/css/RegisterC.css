@@ -1,67 +1,133 @@
-body {
+.container-reg{
     margin: 0;
-    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
 }
 
-.containerRegister{
-    display: flex;
-    justify-content: start;
-    height: 80vh;
+.Row-reg{
+    height: 99%;
     width: 100%;
-    background-image: url(https://i.pinimg.com/564x/b6/69/09/b66909b7b63193a644012fd6d2044df2.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    margin: auto;
+    background-color: #B8ECF5;
+    border: 2px solid #00507A;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
-.section-2{
+.col-left{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    justify-content: center; 
-    align-content: center;
 }
 
-.section-2{
+.col-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.col-right p{
+    margin-top: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+}
+
+.col-right h2{
+    margin-top: 40px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+}
+
+.form-reg{
+    border: none;
+}
+
+.form-reg input {
+    border: none;
+    border-radius: 0;
+    font-family: 'Oswald', sans-serif;
+    margin-left: 5px;
+    width: 300px;
+    background-color: #B8ECF5;
+    border-bottom: #00507A 2px solid;
+}
+
+.form-reg button{
+    font-family: 'Oswald', sans-serif;
+    width: 85px;
+}
+
+.div-reg{
     width: 400px;
-    border-radius: 10px;
-    margin: auto 180px;
-    padding: 0px;
+    height: 50px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-self: center;
 }
 
-.glass{
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 20px;
-    border:1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-}
-
-.imgLogin{
-    width: 40px;
-    margin: 0 0 5px 130px;
-}
-
-.btn-css{
-    background: transparent;
+.btn-reg{
+    text-decoration: none;
+    font-size: 20px;
     color: black;
-    border: solid 1px black;
+    background-color: #82DDED;
+    color: #ffffff;
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    margin-left: 68px;
 }
 
-@media (min-width: 602px) and (max-width: 800px){
-    .section-2{
-        border-radius: 20px;
-        margin: 217px auto;
-        padding: 0px;
-    }
+.link-home{
+    border: #00507A 2px solid;
+    border-radius: 10px;
+    width: 240px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    margin-bottom: 40px;
+    background-color: #82DDED;
+    color: #ffffff;
 }
 
-@media (max-width: 601px){
-    
-    .section-2{
-        border-radius: 10px;
-        margin: 217px auto;
-        padding: 0px;
-    }
+.link-home:hover{
+    background-color: #00507A;
 }
+
+@media (max-width: 810px) {
+    .div-reg {
+      width: 100%;
+    }
+  
+    .form-reg input {
+      width: 100%;
+    }
+  
+    .btn-reg {
+      margin-left: 0;
+    }
+
+    .col-left{
+        height: 40%;
+    }
+  }
