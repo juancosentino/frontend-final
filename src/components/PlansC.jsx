@@ -5,11 +5,11 @@ const PlansC = () => {
   return (
     <body>
 
-        <header>
-            <h1>Planes de Cuidado Veterinario</h1>
+        <header style={{background: '#CAF0F8', borderBottom: 'solid 2px #0085CC'}}>
+            <h1 className='title-plan'>Planes de Cuidado Veterinario</h1>
         </header>
 
-        <section>
+        <section style={{background: '#00507A'}}>
             <div class="plan">
             <h2>Plan para Mascotas de 0 a 5 Años</h2>
             <p><strong>Precio:</strong> $60/mes</p>
