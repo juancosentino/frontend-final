@@ -1,0 +1,27 @@
+.col-doc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.Div-Doc{
+    border: 2px solid #00507A;
+    border-radius: 10px;
+    width: 300px;
+    height: 80px;
+    background-color: #B8ECF5;
+}
+.Div-Doc h2{
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif; 
+}
+
+@media (max-width: 991px) {
+    .col-doc{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+}
