@@ -1,0 +1,39 @@
+.card .card-body {
+    margin: 0px;
+    overflow: hidden; 
+}
+
+.mi-card {
+    width: 100px; /* Ancho deseado */
+    height: 300px; /* Alto deseado */
+    border-radius: 350px;
+}
+
+.bodyCard{
+    background: #CAF0F8;
+    margin: 0px;
+    border-top: 1px solid #0085CC;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}  
+
+.btn-home{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    background-color: #82DDED;
+    color: #ffffff;
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.btn-home:hover {
+    background-color: #00CCF5;
+}
+
+.tipo-letra{
+    font-family: 'Oswald', sans-serif;
+}
+
+
