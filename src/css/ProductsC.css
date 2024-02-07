@@ -1,0 +1,8 @@
+.paginacion-products{
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-products{
+    margin-top: 20px;
+}
