@@ -24,7 +24,8 @@ section {
 .plan {
     margin-bottom: 20px;
     padding: 20px;
-    border: 1px solid #ddd;
+    background: #CAF0F8;
+    border: 1.5px solid #0085CC;
     border-radius: 8px;
 }
 
@@ -40,6 +41,16 @@ section {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.plan{
+    font-family: 'Oswald', sans-serif;
+}
+
+.title-plan{
+    font-family: 'Oswald', sans-serif;
+    color: black;
 }
 
 @media (max-width: 600px) and (min-width: 449px) {
