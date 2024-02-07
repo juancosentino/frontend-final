@@ -1,3 +1,8 @@
 .imgNav{
     margin: 0 10px 0 5px;
 }
+
+.fuente-navbar{
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+}
